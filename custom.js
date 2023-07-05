@@ -71,6 +71,10 @@ new Chart(ctx, {
         text: 'Seat Matrix 2023',
         position: 'bottom',
       },
+      legend:{
+        display:'true',
+        position:'right',
+      },
     },
   },
 });
