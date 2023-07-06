@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IIT Jodhpur</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // Get a reference to the canvas element
+    const canvas = document.getElementById('myChart');
+
+    // Create the chart using Chart.js
+    const ctx = canvas.getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar', // Specify the chart type
+      data: {
+        labels: ['DSAI','BSBE','CE', 'CL',  'CSE','EEE', 'ME', 'MECH',],
+        datasets: [{
+          label: 'IIT Jodhpur Branchwise seat matrix',
+          data: [50,50,50,50,80,80,50,80],
+          backgroundColor: 'rgba(128, 0, 128, 0.3)', // Background color of the bars
+          borderColor: 'rgba(0, 0, 0, 1)', // Border color of the bars
+          borderWidth: 1.5 // Width of the bar borders
+        }]
+      },
+      options: {
+        responsive: true, // Make the graph responsive
+        scales: {
+          y: {
+            beginAtZero: true // Start the y-axis at zero
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

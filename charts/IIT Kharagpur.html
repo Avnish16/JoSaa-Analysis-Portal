@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IIT Kharagpur</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // Get a reference to the canvas element
+    const canvas = document.getElementById('myChart');
+
+    // Create the chart using Chart.js
+    const ctx = canvas.getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar', // Specify the chart type
+      data: {
+        labels: ['AE','AFE','BSBE','CE', 'CL', 'CSE', 'ECE','EEE', 'ISE', 'IE', 'MSE', 'MECH','MM','ME','OENA',],
+        datasets: [{
+          label: 'IIT Kharagpur Branchwise seat matrix',
+          data: [44, 48, 36, 87, 79, 80, 80, 90, 43, 44, 44, 99,62,59,46],
+          backgroundColor: 'rgba(128, 0, 128, 0.3)', // Background color of the bars
+          borderColor: 'rgba(0, 0, 0, 1)', // Border color of the bars
+          borderWidth: 1.5 // Width of the bar borders
+        }]
+      },
+      options: {
+        responsive: true, // Make the graph responsive
+        scales: {
+          y: {
+            beginAtZero: true // Start the y-axis at zero
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
